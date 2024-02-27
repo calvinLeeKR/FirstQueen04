@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="IntroScene">
+      <UniqueIdentifier>{653b7151-7779-407c-bf21-e8718aadbafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IntroSave">
+      <UniqueIdentifier>{539ff049-33d4-4f42-97e9-576e621122c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CastleHall">
+      <UniqueIdentifier>{86d368e4-4d25-400c-8931-7a16d0c957ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{b7a08f3e-0770-4478-8ace-2344d5d13097}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FQ01.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CApplication.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameFQ4.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroScene.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneBlack.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneCastle.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneCitizen.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneDwarf.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneKingHall.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneKingOrb.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneSoulGirl.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneTitle.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CIntroSceneWitch.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="CScreen.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="intro_text.h">
+      <Filter>IntroScene</Filter>
+    </ClInclude>
+    <ClInclude Include="startmenu_text.h">
+      <Filter>IntroSave</Filter>
+    </ClInclude>
+    <ClInclude Include="CStartMenu.h">
+      <Filter>IntroSave</Filter>
+    </ClInclude>
+    <ClInclude Include="CCastleHall.h">
+      <Filter>CastleHall</Filter>
+    </ClInclude>
+    <ClInclude Include="castlehall_text.h">
+      <Filter>CastleHall</Filter>
+    </ClInclude>
+    <ClInclude Include="CUnit.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="character_id_table.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CMap.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnimation.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CMemoryBitmap.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CSprite.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CImageFile.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CTextBox.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FQ01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CApplication.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameFQ4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroScene.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneBlack.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneCastle.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneCitizen.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneDwarf.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneKingHall.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneKingOrb.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneSoulGirl.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneTitle.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CIntroSceneWitch.cpp">
+      <Filter>IntroScene</Filter>
+    </ClCompile>
+    <ClCompile Include="CScreen.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CStartMenu.cpp">
+      <Filter>IntroSave</Filter>
+    </ClCompile>
+    <ClCompile Include="CCastleHall.cpp">
+      <Filter>CastleHall</Filter>
+    </ClCompile>
+    <ClCompile Include="CUnit.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CMap.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimation.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="CMemoryBitmap.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="CImageFile.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="CSprite.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextBox.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FQ01.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="FQ01.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="lion.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\dwarf_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\soulgirl_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\kingwithorb_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\kinghall_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\witch_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\citizen_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\castle_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\black_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\title_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\lion.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\lobby_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\yellow_highlight.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_characterbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_frame.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_placetextbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_status.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_textbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\castlehall_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\soldier01_front.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\demon01.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\soldier01_front.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\gabi.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\genelu.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\janil.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\keck.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\laios.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\macgaia.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\maream.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\moldred.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\mysolen.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\ogg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\orason.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\sark.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\soldier02.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\thryhoot.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\castlehall_bg_mini.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_mapframe_mini.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
