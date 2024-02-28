@@ -7,7 +7,7 @@ class CUnit {
 public:
 	CUnit();
 	~CUnit();
-	void Twitch();
+	void Twitch(int frames);
 	void Move(int x, int y);
 	void UpdateCamPos(float cx, float cy);
 	void Draw(HDC hdc);

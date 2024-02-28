@@ -61,16 +61,6 @@ void CMap::Draw2(HDC hdc)
 	}
 }
 
-void CMap::DrawMiniMap(HDC tmpHdc, int x, int y,
-					int destX, int destY, int width, int height)
-{
-	//HDC tmpHdc = GetDC(CApplication::theApp->mhWnd);
-	CScreen screen(tmpHdc, width, height); //window size
-	mBG.mDestX = -176;
-	mBG.mDestY = -336;
-	Draw(screen.m_HDC);
-	screen.Draw(tmpHdc, destX, destY, width, height);
-}
 
 void CMap::AddCharacter(int id, int x, int y, int dir)
 {
@@ -107,6 +97,26 @@ void CMap::OnFrameMove()
 {
 	for (auto it : mCharacters) {
 		it->OnFrameMove();
+	}
+}
+
+void CMap::CharMoves(int moves[5])
+{
+	if (mCharacters[moves[0]]) {
+		if (moves[1]) {
+			mCharacters[moves[0]]->Twitch(60);
+		}
+	}
+
+	if (mCharacters[moves[2]]) {
+		mCharacters[moves[2]]->Move(moves[3], moves[4]);
+		moves[3] = 0;
+		moves[4] = 0;
+	}
+
+	if (mCharacters[moves[5]]) {
+		if (moves[6] == 1)
+			mCharacters[moves[5]]->ChangeAni((std::wstring&)L"char_F");
 	}
 }
 

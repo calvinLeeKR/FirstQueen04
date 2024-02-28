@@ -22,12 +22,12 @@ public:
 
 	void Draw(HDC hdc);
 	void Draw2(HDC hdc);
-	void DrawMiniMap(HDC tmpHdc, int x, int y,
-					int destX, int destY, int width, int height);
-
+	
 	void AddCharacter(int id, int x, int y, int dir);
 	void CameraMove(float x, float y); //x,y만큼 카메라 움직임
 	void OnFrameMove();
+
+	void CharMoves(int moves[5]);
 
 	void Duplicate(CMap* oldMap);
 public:

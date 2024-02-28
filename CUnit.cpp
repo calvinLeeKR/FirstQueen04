@@ -23,6 +23,11 @@ CUnit::~CUnit()
 	delete mCharFile.ani;
 }
 
+void CUnit::Twitch(int frames)
+{
+	mCharSprite.Update(frames);
+}
+
 void CUnit::Move(int sx, int sy)
 {
 	this->x += sx;
@@ -86,4 +91,5 @@ void CUnit::ChangeImg(int mid)
 void CUnit::ChangeAni(std::wstring& pname)
 {
 	mCharSprite.ChangeAnimation(pname);
+	mCharSprite.Update(0);
 }
