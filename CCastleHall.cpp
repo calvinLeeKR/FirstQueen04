@@ -23,12 +23,9 @@ CCastleHall::CCastleHall()
 	m_minimap.origin_x = 192;
 	m_minimap.origin_y = 336;
 	//minimap initialize
-	
-	//mMapSmall = new CMap();
 
 	mBG_CastleHall		= CImageFile::New(MAKEINTRESOURCE(CBG_CASTLEHALL), L"CBG_CASTLEHALL");
-	//mBG_CastleHallMini	= CImageFile::New(MAKEINTRESOURCE(CBG_CASTLEHALL_MINI), L"CBG_CASTLEHALL_MINI");
-
+	
 	mUI_MapFrame	= CImageFile::New(MAKEINTRESOURCE(UI_MAPFRAME_MINI), L"UI_MAPFRAME_MINI");
 	mUI_Frame		= CImageFile::New(MAKEINTRESOURCE(UI_FRAME), L"UI_FRAME");
 	mUI_PlaceTBox	= CImageFile::New(MAKEINTRESOURCE(UI_PLACEBOX), L"UI_PLACEBOX");
@@ -43,13 +40,10 @@ CCastleHall::CCastleHall()
 	mUIMapFrame.Set(192 - 16, -150, 0, 0, mUI_MapFrame, RGB(255, 0, 255), CSprite::DrawType_Transparent);
 	//ui initialize
 
-	//mMapSmall->mBG.mImgFile = mBG_CastleHallMini;
-	//mMapSmall->posX = 180;
-	//mMapSmall->posY = -215;
 	//map initialize
 
 	for (int i = 0; i < 27; i++) {
-		mMap->AddCharacter(chrToAdd[i][0], chrToAdd[i][1] + 1, chrToAdd[i][2] + 1, chrToAdd[i][3]);
+		mMap->AddCharacter(chrToAdd[i][0], chrToAdd[i][1] + 1, chrToAdd[i][2], chrToAdd[i][3]);
 	}
 	//character add
 
@@ -131,7 +125,7 @@ void CCastleHall::onFrameMove()
 
 void CCastleHall::onDraw(HDC hdc)
 {
-	CScreen screen(610, 863);
+	CScreen screen(610 + 16, 863);
 	//HDC hdc = screen.m_HDC;
 
 	mMap->Draw2(screen.m_HDC);
@@ -139,10 +133,6 @@ void CCastleHall::onDraw(HDC hdc)
 	screen.DrawS(hdc, mMap->cameraX, mMap->cameraY, CApplication::theApp->w_width, CApplication::theApp->w_height);
 
 	mUIText.Draw(hdc);
-
-	//mMapSmall->Draw(hdc);
-	//mMap->DrawMiniMap(hdc, m_minimap.origin_x, m_minimap.origin_y,
-	//					m_minimap.x, m_minimap.y, m_minimap.width, m_minimap.height);
 
 	screen.DrawDS(hdc, m_minimap.x, m_minimap.y,
 		m_minimap.origin_x, m_minimap.origin_y, m_minimap.width, m_minimap.height);

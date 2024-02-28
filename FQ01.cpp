@@ -113,7 +113,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    RECT rect;
    GetClientRect(hWnd, &rect); //clinet rect에 크기적용
-   CApplication::theApp->w_width = rect.right - rect.left + 16;
+   CApplication::theApp->w_width = rect.right - rect.left + 32;
    CApplication::theApp->w_height = rect.bottom - rect.top;
 
 

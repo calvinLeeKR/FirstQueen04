@@ -17,29 +17,29 @@ int chrToAdd[30][4] = { //id, x, y, direction //front = 0, other = 1
 	{ID_SOLDIER, 24, 9, 0},
 	{ID_SOLDIER_2, 2, 30, 0},
 	{ID_SOLDIER_2, 8, 30, 0},
-	{ID_SOLDIER_2, 5, 34, 0},
+	{ID_SOLDIER_2, 5, 34, 0},		//4
 	{ID_SOLDIER_2, 2, 34, 0},
 	{ID_SOLDIER_2, 8, 34, 0},
 	{ID_SOLDIER_2, 5, 36, 0},
 	{ID_SOLDIER_2, 28, 30, 1},
-	{ID_SOLDIER_2, 31, 32, 1},
+	{ID_SOLDIER_2, 31, 32, 1},		//9
 	{ID_SOLDIER_2, 28, 34, 1},
 	{ID_SOLDIER_2, 34, 30, 1},
 	{ID_SOLDIER_2, 31, 36, 1},
 	{ID_SOLDIER_2, 34, 34, 1},
-	{ID_GENELU, 18, 26, 0},
+	{ID_GENELU, 18, 27, 0},			//14
 	{ID_MACGAIA, 22, 27, 0},
-	{ID_MOLDRED, 24, 28, 1},
-	{ID_JANIL, 16, 24, 1},
+	{ID_MOLDRED, 24, 29, 1},
+	{ID_JANIL, 16, 26, 1},
 	{ID_THRYHOOT, 24, 27, 1},
-	{ID_OGG, 12, 28, 1},
+	{ID_OGG, 12, 28, 1},			//19
 	{ID_ORASON, 23, 48, 1},
 	{ID_LAIOS, 20, 49, 1},
 	{ID_KECK, 16, 49, 1},
 	{ID_GABI, 13, 48, 1},
-	{ID_MAREAM, 21, 52, 1},
+	{ID_MAREAM, 21, 52, 1},			//24
 	{ID_SARK, 18, 52, 1},
-	{ID_MYSOLEN, 15, 52, 1},
+	{ID_MYSOLEN, 15, 52, 1},		//26
 };
 
 int textChr[30] = {
