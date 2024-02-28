@@ -104,7 +104,7 @@ void CMap::CharMoves(int moves[5])
 {
 	if (mCharacters[moves[0]]) {
 		if (moves[1]) {
-			mCharacters[moves[0]]->Twitch(60);
+			mCharacters[moves[0]]->Twitch(120);
 		}
 	}
 
@@ -115,8 +115,16 @@ void CMap::CharMoves(int moves[5])
 	}
 
 	if (mCharacters[moves[5]]) {
-		if (moves[6] == 1)
-			mCharacters[moves[5]]->ChangeAni((std::wstring&)L"char_F");
+		std::wstring chrF = L"char_F";
+		std::wstring chrO = L"char_O";
+		if (moves[6] == 1) {
+			mCharacters[moves[5]]->ChangeAni(chrF);
+			moves[6] = 0;
+		}
+		else if (moves[6] == 2) {
+			mCharacters[moves[5]]->ChangeAni(chrO);
+			moves[6] = 0;
+		}
 	}
 }
 
