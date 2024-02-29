@@ -144,6 +144,7 @@
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CApplication.h" />
     <ClInclude Include="CCastleHall.h" />
+    <ClInclude Include="CKarionMeetingRoom.h" />
     <ClInclude Include="CTextBox.h" />
     <ClInclude Include="CUnit.h" />
     <ClInclude Include="CGameFQ4.h" />
@@ -168,6 +169,7 @@
     <ClInclude Include="CSprite.h" />
     <ClInclude Include="FQ01.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="karionmeetingroom_text.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="startmenu_text.h" />
@@ -179,6 +181,7 @@
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CApplication.cpp" />
     <ClCompile Include="CCastleHall.cpp" />
+    <ClCompile Include="CKarionMeetingRoom.cpp" />
     <ClCompile Include="CTextBox.cpp" />
     <ClCompile Include="CUnit.cpp" />
     <ClCompile Include="CGameFQ4.cpp" />
@@ -208,13 +211,18 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="FQ01.ico" />
+    <Image Include="images\backgrounds\castlehall_bg.bmp" />
+    <Image Include="images\backgrounds\castlehall_bg_mini.bmp" />
+    <Image Include="images\backgrounds\karion_meetingroom.bmp" />
     <Image Include="images\black_bg.bmp" />
     <Image Include="images\castlehall_bg.bmp" />
     <Image Include="images\castlehall_bg_mini.bmp" />
     <Image Include="images\castle_bg.bmp" />
+    <Image Include="images\characters\aerain.bmp" />
     <Image Include="images\characters\demon01.bmp" />
     <Image Include="images\characters\gabi.bmp" />
     <Image Include="images\characters\genelu.bmp" />
+    <Image Include="images\characters\gonrad.bmp" />
     <Image Include="images\characters\janil.bmp" />
     <Image Include="images\characters\keck.bmp" />
     <Image Include="images\characters\laios.bmp" />
@@ -239,6 +247,13 @@
     <Image Include="images\title_bg.bmp" />
     <Image Include="images\ui_characterbox.bmp" />
     <Image Include="images\ui_frame.bmp" />
+    <Image Include="images\ui_images\ui_characterbox.bmp" />
+    <Image Include="images\ui_images\ui_frame.bmp" />
+    <Image Include="images\ui_images\ui_mapframe_mini.bmp" />
+    <Image Include="images\ui_images\ui_placetextbox.bmp" />
+    <Image Include="images\ui_images\ui_status.bmp" />
+    <Image Include="images\ui_images\ui_textbox.bmp" />
+    <Image Include="images\ui_images\yellow_highlight.bmp" />
     <Image Include="images\ui_mapframe_mini.bmp" />
     <Image Include="images\ui_placetextbox.bmp" />
     <Image Include="images\ui_status.bmp" />

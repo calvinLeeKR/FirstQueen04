@@ -19,11 +19,17 @@
     <Filter Include="IntroSave">
       <UniqueIdentifier>{539ff049-33d4-4f42-97e9-576e621122c7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CastleHall">
-      <UniqueIdentifier>{86d368e4-4d25-400c-8931-7a16d0c957ae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{b7a08f3e-0770-4478-8ace-2344d5d13097}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainScene">
+      <UniqueIdentifier>{9559f294-86e5-455d-a39f-e0d1a1378d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainScene\CastleHall">
+      <UniqueIdentifier>{86d368e4-4d25-400c-8931-7a16d0c957ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainScene\KarionMeetingRoom">
+      <UniqueIdentifier>{a4168054-9a37-4c94-bdc3-fdf7bfb7b57b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -97,10 +103,10 @@
       <Filter>IntroSave</Filter>
     </ClInclude>
     <ClInclude Include="CCastleHall.h">
-      <Filter>CastleHall</Filter>
+      <Filter>MainScene\CastleHall</Filter>
     </ClInclude>
     <ClInclude Include="castlehall_text.h">
-      <Filter>CastleHall</Filter>
+      <Filter>MainScene\CastleHall</Filter>
     </ClInclude>
     <ClInclude Include="CUnit.h">
       <Filter>헤더 파일</Filter>
@@ -125,6 +131,12 @@
     </ClInclude>
     <ClInclude Include="CTextBox.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CKarionMeetingRoom.h">
+      <Filter>MainScene\KarionMeetingRoom</Filter>
+    </ClInclude>
+    <ClInclude Include="karionmeetingroom_text.h">
+      <Filter>MainScene\KarionMeetingRoom</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -177,7 +189,7 @@
       <Filter>IntroSave</Filter>
     </ClCompile>
     <ClCompile Include="CCastleHall.cpp">
-      <Filter>CastleHall</Filter>
+      <Filter>MainScene\CastleHall</Filter>
     </ClCompile>
     <ClCompile Include="CUnit.cpp">
       <Filter>소스 파일</Filter>
@@ -199,6 +211,9 @@
     </ClCompile>
     <ClCompile Include="CTextBox.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CKarionMeetingRoom.cpp">
+      <Filter>MainScene\KarionMeetingRoom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +340,42 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="images\ui_mapframe_mini.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\backgrounds\karion_meetingroom.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\yellow_highlight.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_characterbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_frame.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_placetextbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_status.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_textbox.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\backgrounds\castlehall_bg.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\backgrounds\castlehall_bg_mini.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_mapframe_mini.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\aerain.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\gonrad.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

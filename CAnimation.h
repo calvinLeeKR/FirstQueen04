@@ -41,6 +41,8 @@ public:
 	~CAnimation();
 	void CreateSample();
 	void CreateSampleNPC();
+    void CreateSample4Direction();
+
 	FrameAnimation* Find(std::wstring& name);
 public:
 	std::vector<FrameAnimation*> m_FrameAnimations;

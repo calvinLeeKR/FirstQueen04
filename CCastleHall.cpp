@@ -68,7 +68,7 @@ CCastleHall::~CCastleHall()
 
 bool CCastleHall::isMustChanged()
 {
-	return false;
+	return isSceneEnded;
 }
 
 void CCastleHall::onFrameMove()
@@ -91,7 +91,7 @@ void CCastleHall::onFrameMove()
 			mMap->CameraMove(0, 4);
 			frameCount++;
 		}
-		else if (frameCount < 124 + 192/2) {
+		else if (frameCount < 124 + 192 / 2) {
 			mUIMapFrame.mDestY += 2;
 			m_minimap.height += 2;
 			//mMapSmall->CameraMove(0, -1);
@@ -102,7 +102,7 @@ void CCastleHall::onFrameMove()
 			break;
 		}
 		break; //scroll
-	case 2:	
+	case 2:
 	case 3:		case 4:		case 5:		case 6:		case 7:		case 8:		case 9:
 	case 10:	case 11:	case 12:	case 13:	case 14:	case 15:	case 16:	case 17:
 	case 18:	case 19:
@@ -119,6 +119,9 @@ void CCastleHall::onFrameMove()
 			break;
 		}
 		break; //text Ãâ·Â
+	case 20:
+		isSceneEnded = TRUE;
+		break;
 	}
 
 	mMap->OnFrameMove();

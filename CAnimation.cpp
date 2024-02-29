@@ -85,6 +85,51 @@ void CAnimation::CreateSampleNPC()
 	m_FrameAnimations.push_back(fa_other);
 }
 
+void CAnimation::CreateSample4Direction() {
+	int w = 32;
+	int h = 32;
+
+	FrameAnimation* fa = new FrameAnimation;
+	fa->m_Frames.push_back(FRAME(0, 0, w, h));
+	fa->m_Frames.push_back(FRAME(w, 0, w, h));
+	fa->m_AnimKeys.push_back(ANIM_KEY(0, 500));
+	fa->m_AnimKeys.push_back(ANIM_KEY(1, 500));
+	fa->m_Name = L"char_F";
+	m_FrameAnimations.push_back(fa);
+
+	FrameAnimation* fa_left = new FrameAnimation;
+	fa_left->m_Frames.push_back(FRAME(0, h, w, h));
+	fa_left->m_Frames.push_back(FRAME(w, h, w, h));
+	fa_left->m_AnimKeys.push_back(ANIM_KEY(0, 500));
+	fa_left->m_AnimKeys.push_back(ANIM_KEY(1, 500));
+	fa_left->m_Name = L"char_L";
+	m_FrameAnimations.push_back(fa_left);
+
+	FrameAnimation* fa_right = new FrameAnimation;
+	fa_right->m_Frames.push_back(FRAME(0, h * 2, w, h));
+	fa_right->m_Frames.push_back(FRAME(w, h * 2, w, h));
+	fa_right->m_AnimKeys.push_back(ANIM_KEY(0, 500));
+	fa_right->m_AnimKeys.push_back(ANIM_KEY(1, 500));
+	fa_right->m_Name = L"char_R";
+	m_FrameAnimations.push_back(fa_right);
+
+	FrameAnimation* fa_top = new FrameAnimation;
+	fa_top->m_Frames.push_back(FRAME(0, h * 3, w, h));
+	fa_top->m_Frames.push_back(FRAME(w, h * 3, w, h));
+	fa_top->m_AnimKeys.push_back(ANIM_KEY(0, 500));
+	fa_top->m_AnimKeys.push_back(ANIM_KEY(1, 500));
+	fa_top->m_Name = L"char_B";
+	m_FrameAnimations.push_back(fa_top);
+
+	FrameAnimation* fa_act = new FrameAnimation;
+	fa_act->m_Frames.push_back(FRAME(0, h * 4, w, h));
+	fa_act->m_Frames.push_back(FRAME(w, h * 4, w, h));
+	fa_act->m_AnimKeys.push_back(ANIM_KEY(0, 500));
+	fa_act->m_AnimKeys.push_back(ANIM_KEY(1, 500));
+	fa_act->m_Name = L"char_A";
+	m_FrameAnimations.push_back(fa_act);
+}
+
 FrameAnimation* CAnimation::Find(std::wstring& name)
 {
 	for (FrameAnimation* it : m_FrameAnimations) { //vector일경우 : 이용해서 멤버접근가능

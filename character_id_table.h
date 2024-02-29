@@ -14,4 +14,6 @@
 #define ID_SARK			11
 #define ID_THRYHOOT		12
 #define ID_GENELU		13
-#define ID_SOLDIER_2	14
+#define ID_AERAIN		14
+#define ID_GONRAD		15
+#define ID_SOLDIER_2	16 //dummy

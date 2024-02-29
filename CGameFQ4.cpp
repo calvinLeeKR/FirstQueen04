@@ -13,6 +13,7 @@
 #include "CStartMenu.h"
 //main
 #include "CCastleHall.h"
+#include "CKarionMeetingRoom.h"
 
 #include "CGameFQ4.h"
 
@@ -67,6 +68,10 @@ void CGameFQ4::onChangeScene()
 			mStartMenu = new CStartMenu;
 			mCurrent = mStartMenu;
 		}
+		else if (mCurrent == mCastleHall) {
+			mKarionMeetingRoom = new CKarionMeetingRoom;
+			mCurrent = mKarionMeetingRoom;
+		}
 	}
 
 	if (introCalling && isKeyPressed) {
@@ -94,7 +99,7 @@ void CGameFQ4::onCreate()
 
 void CGameFQ4::onDestroy()
 {
-	delete mIntroS;
+	delete mCurrent;
 }
 
 void CGameFQ4::onKeyDown(UINT virtual_key)

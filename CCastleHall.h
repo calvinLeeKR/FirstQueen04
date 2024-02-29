@@ -48,5 +48,7 @@ public:
 	bool isWaitingClick;
 	bool textReady;
 	bool textSceneCheck;
+
+	bool isSceneEnded;
 };
 

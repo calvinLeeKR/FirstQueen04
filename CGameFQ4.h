@@ -14,6 +14,7 @@ class CIntroSceneTitle;
 class CStartMenu;
 //main
 class CCastleHall;
+class CKarionMeetingRoom;
 
 class CGameFQ4 : public IGame {
 public:
@@ -43,5 +44,6 @@ public:
 	CStartMenu*				mStartMenu;
 
 	CCastleHall*			mCastleHall;
+	CKarionMeetingRoom*		mKarionMeetingRoom;
 };
 

@@ -29,6 +29,11 @@ CMap::~CMap()
 	delete mBackGround;
 }
 
+void CMap::ChangeBGImage(CImageFile* mBGF)
+{
+	mBG.mImgFile = mBGF;
+}
+
 void CMap::Draw(HDC hdc)
 {
 	mBG.mDestX = (-1) * cameraX + posX;
@@ -74,10 +79,26 @@ void CMap::AddCharacter(int id, int x, int y, int dir)
 
 
 	std::wstring tempstr;
-	if (dir == 0) tempstr = L"char_F";
-	else tempstr = L"char_O";
+
+	switch (dir)
+	{
+	case 0: tempstr = L"char_F"; break;
+	case 10: tempstr = L"char_L"; break;
+	case 11: tempstr = L"char_R"; break;
+	case 12: tempstr = L"char_B"; break;
+	case 13: tempstr = L"char_A"; break;
+	default: tempstr = L"char_O"; break;
+	}
 	
-	tempchrptr->mCharFile.ani->CreateSampleNPC();
+	switch (tempchrptr->id)
+	{
+	case ID_AERAIN: case ID_GONRAD:
+		tempchrptr->mCharFile.ani->CreateSample4Direction();
+		break;
+	default:
+		tempchrptr->mCharFile.ani->CreateSampleNPC();
+		break;
+	}
 
 	tempchrptr->ChangeAni(tempstr);
 
