@@ -20,6 +20,8 @@ public:
 	CMap(int x, int y);
 	~CMap();
 
+	void ChangeBGImage(CImageFile* mBGF);
+
 	void Draw(HDC hdc);
 	void Draw2(HDC hdc);
 	
