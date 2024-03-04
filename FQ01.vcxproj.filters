@@ -378,5 +378,20 @@
     <Image Include="images\characters\gonrad.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="images\characters\archbishop.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\ares.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\soldier03.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\bitmap3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\soldier04.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

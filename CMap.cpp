@@ -92,7 +92,8 @@ void CMap::AddCharacter(int id, int x, int y, int dir)
 	
 	switch (tempchrptr->id)
 	{
-	case ID_AERAIN: case ID_GONRAD:
+	case ID_AERAIN:	case ID_GONRAD:	case ID_ARMORSOLDIER: case ID_FULLARMORSOLDIER:
+	case ID_ARES:
 		tempchrptr->mCharFile.ani->CreateSample4Direction();
 		break;
 	default:

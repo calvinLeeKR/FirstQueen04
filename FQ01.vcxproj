@@ -219,6 +219,9 @@
     <Image Include="images\castlehall_bg_mini.bmp" />
     <Image Include="images\castle_bg.bmp" />
     <Image Include="images\characters\aerain.bmp" />
+    <Image Include="images\characters\archbishop.bmp" />
+    <Image Include="images\characters\ares.bmp" />
+    <Image Include="images\characters\bitmap3.bmp" />
     <Image Include="images\characters\demon01.bmp" />
     <Image Include="images\characters\gabi.bmp" />
     <Image Include="images\characters\genelu.bmp" />
@@ -235,6 +238,8 @@
     <Image Include="images\characters\sark.bmp" />
     <Image Include="images\characters\soldier01_front.bmp" />
     <Image Include="images\characters\soldier02.bmp" />
+    <Image Include="images\characters\soldier03.bmp" />
+    <Image Include="images\characters\soldier04.bmp" />
     <Image Include="images\characters\thryhoot.bmp" />
     <Image Include="images\citizen_bg.bmp" />
     <Image Include="images\dwarf_bg.bmp" />

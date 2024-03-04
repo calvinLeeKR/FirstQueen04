@@ -4,33 +4,16 @@
 #include "character_id_table.h"
 
 int chrToAdd_01[30][4] = { //id, x, y, direction //front = 0, other = 1
-	{ID_SOLDIER, 12, 9, 0},
-	{ID_SOLDIER, 24, 9, 0},
-	{ID_SOLDIER_2, 2, 30, 0},
-	{ID_SOLDIER_2, 8, 30, 0},
-	{ID_SOLDIER_2, 5, 34, 0},		//4
-	{ID_SOLDIER_2, 2, 34, 0},
-	{ID_SOLDIER_2, 8, 34, 0},
-	{ID_SOLDIER_2, 5, 36, 0},
-	{ID_SOLDIER_2, 28, 30, 1},
-	{ID_SOLDIER_2, 31, 32, 1},		//9
-	{ID_SOLDIER_2, 28, 34, 1},
-	{ID_SOLDIER_2, 34, 30, 1},
-	{ID_SOLDIER_2, 31, 36, 1},
-	{ID_SOLDIER_2, 34, 34, 1},
-	{ID_GENELU, 18, 26, 0},			//14
-	{ID_MACGAIA, 22, 27, 0},
-	{ID_MOLDRED, 24, 29, 1},
-	{ID_JANIL, 16, 25, 1},
-	{ID_THRYHOOT, 14, 27, 1},
-	{ID_OGG, 12, 28, 1},			//19
-	{ID_ORASON, 23, 48, 1},
-	{ID_LAIOS, 20, 49, 1},
-	{ID_KECK, 16, 49, 1},
-	{ID_GABI, 13, 48, 1},
-	{ID_MAREAM, 21, 52, 1},			//24
-	{ID_SARK, 18, 52, 1},
-	{ID_MYSOLEN, 15, 52, 1},		//26
+	{ID_FULLARMORSOLDIER, 12, 5, 0},
+	{ID_FULLARMORSOLDIER, 16, 5, 0},
+	{ID_FULLARMORSOLDIER, 24, 5, 0},
+	{ID_FULLARMORSOLDIER, 14, 18, 0},
+	{ID_FULLARMORSOLDIER, 22, 18, 0},
+	{ID_ARMORSOLDIER, 5, 7, 1},
+	{ID_ARMORSOLDIER, 31, 7, 0},
+	{ID_ARCBISHOP, 14, 3, 0},
+	{ID_GONRAD, 20, 5, 0},
+	{ID_ARES, 18, 16, 0},
 };
 
 int ChrActs_01[30][7] = { // id, if:Twitch(), Move{id, x, y}, ChangeAni(id, string)
@@ -50,17 +33,17 @@ int ChrActs_01[30][7] = { // id, if:Twitch(), Move{id, x, y}, ChangeAni(id, stri
 
 int textChr_01[30] = {
 	100,
-	ID_GENELU,
-	ID_GENELU,
+	ID_ARES,
+	ID_FULLARMORSOLDIER,
 	ID_GONRAD,
-	ID_GABI,
+	ID_ARES,
 	ID_GONRAD,
-	ID_LAIOS,
+	ID_ARES,
 	ID_GONRAD,
-	ID_MAREAM,
-	ID_GENELU,
+	ID_ARES,
+	ID_ARCBISHOP,
 	ID_AERAIN,
-	ID_SARK
+	ID_ARES
 };
 
 const WCHAR text_01[30][3][50] = {

@@ -34,6 +34,20 @@ void CUnit::Move(int sx, int sy)
 	this->y += sy;
 }
 
+void CUnit::Walk(int dx, int dy)
+{
+	Move(dx, dy);
+	std::wstring charR = L"char_R";
+	std::wstring charL = L"char_R";
+	std::wstring charF = L"char_F";
+	std::wstring charB = L"char_B";
+	if (dx >= 0 && dy == 0) mCharSprite.ChangeAnimation(charR);
+	else if (dx < 0 && dy == 0) mCharSprite.ChangeAnimation(charL);
+	else if (dx == 0 && dy >= 0) mCharSprite.ChangeAnimation(charB);
+	else if (dx == 0 && dy < 0) mCharSprite.ChangeAnimation(charF);
+	mCharSprite.Update(100);
+}
+
 void CUnit::UpdateCamPos(float cx, float cy)
 {
 	mCharSprite.mDestX = (-1) * cx + 16 * x;
@@ -85,6 +99,14 @@ void CUnit::ChangeImg(int mid)
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_AERAIN), L"OBJ_AERAIN"); break;
 	case ID_GONRAD:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_GONRAD), L"OBJ_GONRAD"); break;
+	case ID_ARCBISHOP:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_ARCBISHOP), L"OBJ_ARCBISHOP"); break;
+	case ID_ARMORSOLDIER:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_ARMOREDSOLDIER), L"OBJ_ARMOREDSOLDIER"); break;
+	case ID_FULLARMORSOLDIER:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_FULLARMORSOLDIER), L"OBJ_FULLARMORSOLDIER"); break;
+	case ID_ARES:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_ARES), L"OBJ_ARES"); break;
 	case ID_SOLDIER_2:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER2), L"OBJ_SOLDIER2"); break;
 	}

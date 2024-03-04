@@ -8,7 +8,8 @@ public:
 	CUnit();
 	~CUnit();
 	void Twitch(int frames);
-	void Move(int x, int y);
+	void Move(int x, int y); //단순 이동
+	void Walk(int dx, int dy); //방향, 애니메이션 포함
 	void UpdateCamPos(float cx, float cy);
 	void Draw(HDC hdc);
 	void OnFrameMove();
