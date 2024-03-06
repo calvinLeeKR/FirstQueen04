@@ -27,8 +27,8 @@ CTextBox::CTextBox()
 
 CTextBox::~CTextBox()
 {
-	delete textImg;
-	delete charBox;
+	CImageFile::Delete(textImg);
+	CImageFile::Delete(charBox);
 	DeleteObject(mFont);
 }
 
