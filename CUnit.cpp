@@ -43,8 +43,8 @@ void CUnit::Walk(int dx, int dy)
 	std::wstring charB = L"char_B";
 	if (dx >= 0 && dy == 0) mCharSprite.ChangeAnimation(charR);
 	else if (dx < 0 && dy == 0) mCharSprite.ChangeAnimation(charL);
-	else if (dx == 0 && dy >= 0) mCharSprite.ChangeAnimation(charB);
-	else if (dx == 0 && dy < 0) mCharSprite.ChangeAnimation(charF);
+	else if (dx == 0 && dy >= 0) mCharSprite.ChangeAnimation(charF);
+	else if (dx == 0 && dy < 0) mCharSprite.ChangeAnimation(charB);
 	mCharSprite.Update(100);
 }
 

@@ -90,8 +90,9 @@ void CGameFQ4::onChangeScene()
 
 void CGameFQ4::onCreate()
 {
-	mIntroS = new CIntroScene;
-	mCurrent = mIntroS;
+	mKarionMeetingRoom = new CKarionMeetingRoom;
+	//mIntroS = new CIntroScene;
+	mCurrent = mKarionMeetingRoom;
 
 	introCalling = TRUE;
 	isKeyPressed = FALSE;
