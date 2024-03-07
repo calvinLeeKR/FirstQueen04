@@ -8,6 +8,7 @@ CUnit::CUnit()
 	//charImg = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER_F), L"OBJ_SOLDIER");
 	//mCharImg.Set(0, 0, 0, 0, charImg, RGB(255,0,255), CSprite::DrawType_Transparent);
 	//normal unit sample
+	selfAnimFrame = 0;
 
 	mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER2), L"OBJ_SOLDIER2");
 	mCharFile.ani = new CAnimation;
@@ -38,14 +39,15 @@ void CUnit::Walk(int dx, int dy)
 {
 	Move(dx, dy);
 	std::wstring charR = L"char_R";
-	std::wstring charL = L"char_R";
+	std::wstring charL = L"char_L";
 	std::wstring charF = L"char_F";
 	std::wstring charB = L"char_B";
 	if (dx >= 0 && dy == 0) mCharSprite.ChangeAnimation(charR);
 	else if (dx < 0 && dy == 0) mCharSprite.ChangeAnimation(charL);
 	else if (dx == 0 && dy >= 0) mCharSprite.ChangeAnimation(charF);
 	else if (dx == 0 && dy < 0) mCharSprite.ChangeAnimation(charB);
-	mCharSprite.Update(100);
+	mCharSprite.Update((selfAnimFrame % 2) * 500);
+	selfAnimFrame++;
 }
 
 void CUnit::UpdateCamPos(float cx, float cy)

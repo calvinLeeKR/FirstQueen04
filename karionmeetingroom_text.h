@@ -4,16 +4,17 @@
 #include "character_id_table.h"
 
 int chrToAdd_01[30][4] = { //id, x, y, direction //front = 0, other = 1
-	{ID_FULLARMORSOLDIER, 12, 5, 0},
-	{ID_FULLARMORSOLDIER, 16, 5, 0},
+	{ID_FULLARMORSOLDIER, 12, 5, 0},	//0
+	{ID_FULLARMORSOLDIER, 16, 5, 0},	
 	{ID_FULLARMORSOLDIER, 24, 5, 0},
 	{ID_FULLARMORSOLDIER, 14, 18, 0},
 	{ID_FULLARMORSOLDIER, 22, 18, 0},
-	{ID_ARMORSOLDIER, 5, 7, 1},
+	{ID_ARMORSOLDIER, 5, 7, 1},			//5
 	{ID_ARMORSOLDIER, 31, 7, 0},
 	{ID_ARCBISHOP, 14, 3, 0},
 	{ID_GONRAD, 20, 5, 0},
-	{ID_ARES, 18, 16, 0},
+	{ID_ARES, 18, 16, 0},				//9
+	{ID_AERAIN, 18, 22, 0}				//10
 };
 
 int ChrActs_01[30][7] = { // id, if:Twitch(), Move{id, x, y}, ChangeAni(id, string)
