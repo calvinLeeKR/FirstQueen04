@@ -25,11 +25,14 @@
     <Filter Include="MainScene">
       <UniqueIdentifier>{9559f294-86e5-455d-a39f-e0d1a1378d1f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MainScene\CastleHall">
+    <Filter Include="MainScene\01CastleHall">
       <UniqueIdentifier>{86d368e4-4d25-400c-8931-7a16d0c957ae}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MainScene\KarionMeetingRoom">
+    <Filter Include="MainScene\02KarionMeetingRoom">
       <UniqueIdentifier>{a4168054-9a37-4c94-bdc3-fdf7bfb7b57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainScene\03CastleHall">
+      <UniqueIdentifier>{25a01acd-a1f0-4b5a-869e-48bf2ef19d0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,10 +106,10 @@
       <Filter>IntroSave</Filter>
     </ClInclude>
     <ClInclude Include="CCastleHall.h">
-      <Filter>MainScene\CastleHall</Filter>
+      <Filter>MainScene\01CastleHall</Filter>
     </ClInclude>
     <ClInclude Include="castlehall_text.h">
-      <Filter>MainScene\CastleHall</Filter>
+      <Filter>MainScene\01CastleHall</Filter>
     </ClInclude>
     <ClInclude Include="CUnit.h">
       <Filter>헤더 파일</Filter>
@@ -133,10 +136,16 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="CKarionMeetingRoom.h">
-      <Filter>MainScene\KarionMeetingRoom</Filter>
+      <Filter>MainScene\02KarionMeetingRoom</Filter>
     </ClInclude>
     <ClInclude Include="karionmeetingroom_text.h">
-      <Filter>MainScene\KarionMeetingRoom</Filter>
+      <Filter>MainScene\02KarionMeetingRoom</Filter>
+    </ClInclude>
+    <ClInclude Include="castlehall_text_02.h">
+      <Filter>MainScene\03CastleHall</Filter>
+    </ClInclude>
+    <ClInclude Include="CCastleHall_02.h">
+      <Filter>MainScene\03CastleHall</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -189,7 +198,7 @@
       <Filter>IntroSave</Filter>
     </ClCompile>
     <ClCompile Include="CCastleHall.cpp">
-      <Filter>MainScene\CastleHall</Filter>
+      <Filter>MainScene\01CastleHall</Filter>
     </ClCompile>
     <ClCompile Include="CUnit.cpp">
       <Filter>소스 파일</Filter>
@@ -213,7 +222,10 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="CKarionMeetingRoom.cpp">
-      <Filter>MainScene\KarionMeetingRoom</Filter>
+      <Filter>MainScene\02KarionMeetingRoom</Filter>
+    </ClCompile>
+    <ClCompile Include="CCastleHall_02.cpp">
+      <Filter>MainScene\03CastleHall</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -391,6 +403,15 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="images\characters\soldier04.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_textbox_1line.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_textbox_2lines.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\ui_images\ui_textbox_4lines.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>

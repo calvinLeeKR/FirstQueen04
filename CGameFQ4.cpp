@@ -14,6 +14,7 @@
 //main
 #include "CCastleHall.h"
 #include "CKarionMeetingRoom.h"
+#include "CCastleHall_02.h"
 
 #include "CGameFQ4.h"
 
@@ -72,6 +73,10 @@ void CGameFQ4::onChangeScene()
 			mKarionMeetingRoom = new CKarionMeetingRoom;
 			mCurrent = mKarionMeetingRoom;
 		}
+		else if (mCurrent == mKarionMeetingRoom) {
+			mCastleHall_02 = new CCastleHall_02;
+			mCurrent = mCastleHall_02;
+		}
 	}
 
 	if (introCalling && isKeyPressed) {
@@ -90,9 +95,8 @@ void CGameFQ4::onChangeScene()
 
 void CGameFQ4::onCreate()
 {
-	mKarionMeetingRoom = new CKarionMeetingRoom;
-	//mIntroS = new CIntroScene;
-	mCurrent = mKarionMeetingRoom;
+	mIntroS = new CIntroScene;
+	mCurrent = mIntroS;
 
 	introCalling = TRUE;
 	isKeyPressed = FALSE;

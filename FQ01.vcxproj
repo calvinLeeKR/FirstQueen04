@@ -143,7 +143,9 @@
   <ItemGroup>
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CApplication.h" />
+    <ClInclude Include="castlehall_text_02.h" />
     <ClInclude Include="CCastleHall.h" />
+    <ClInclude Include="CCastleHall_02.h" />
     <ClInclude Include="CKarionMeetingRoom.h" />
     <ClInclude Include="CTextBox.h" />
     <ClInclude Include="CUnit.h" />
@@ -181,6 +183,7 @@
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CApplication.cpp" />
     <ClCompile Include="CCastleHall.cpp" />
+    <ClCompile Include="CCastleHall_02.cpp" />
     <ClCompile Include="CKarionMeetingRoom.cpp" />
     <ClCompile Include="CTextBox.cpp" />
     <ClCompile Include="CUnit.cpp" />
@@ -258,6 +261,9 @@
     <Image Include="images\ui_images\ui_placetextbox.bmp" />
     <Image Include="images\ui_images\ui_status.bmp" />
     <Image Include="images\ui_images\ui_textbox.bmp" />
+    <Image Include="images\ui_images\ui_textbox_1line.bmp" />
+    <Image Include="images\ui_images\ui_textbox_2lines.bmp" />
+    <Image Include="images\ui_images\ui_textbox_4lines.bmp" />
     <Image Include="images\ui_images\yellow_highlight.bmp" />
     <Image Include="images\ui_mapframe_mini.bmp" />
     <Image Include="images\ui_placetextbox.bmp" />

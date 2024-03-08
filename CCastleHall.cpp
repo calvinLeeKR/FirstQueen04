@@ -150,10 +150,10 @@ void CCastleHall::onDraw(HDC hdc)
 	if (textReady) {
 		if (mTxtBox) {
 			mFont = mTxtBox->mFont;
-			mTxtBox->Print(text[textOrder][0], text[textOrder][1], text[textOrder][2], hdc);
+			mTxtBox->Print(text[textOrder], hdc);
 		}
 		else {
-			TextOutW(hdc, 240, 165, text[sceneOrder][0], 19);
+			TextOutW(hdc, 240, 165, text[sceneOrder][0], wcslen(text[sceneOrder][0]));
 		}
 	}
 
@@ -173,7 +173,8 @@ void CCastleHall::onMouseDown(UINT x, UINT y, UCHAR left_right)
 		mUIText.mAlpha = 0x00;
 
 		if (textSceneCheck) {
-			delete mTxtBox;
+			if (mTxtBox) delete mTxtBox;
+			mTxtBox = nullptr;
 			textOrder++;
 			textSceneCheck = FALSE;
 		}

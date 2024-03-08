@@ -47,7 +47,7 @@ int textChr_01[30] = {
 	ID_ARES
 };
 
-const WCHAR text_01[30][3][50] = {
+const LPCWSTR text_01[30][4] = {
 	{
 	L"카리온성 회의실"
 	},

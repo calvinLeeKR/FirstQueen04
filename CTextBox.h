@@ -11,10 +11,12 @@ public:
 	~CTextBox();
 	void MoveBox(int x, int y);
 	void SetChar(int mid);
-	void Print(LPCWSTR tl_1, LPCWSTR tl_2, LPCWSTR tl_3, HDC hdc);
+	void Print(const LPCWSTR text[4], HDC hdc);
 public:
 	int px;
 	int py;
+
+	int lines;
 
 	HFONT mFont;
 

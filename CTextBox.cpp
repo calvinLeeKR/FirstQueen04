@@ -10,6 +10,8 @@ CTextBox::CTextBox()
 	px = 200-64;
 	py = 150;
 
+	lines = 0;
+
 	textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX), L"UI_TEXTBOX");
 	charBox = CImageFile::New(MAKEINTRESOURCE(UI_CHARBOX), L"UI_CHARBOX");
 
@@ -47,14 +49,34 @@ void CTextBox::SetChar(int mid)
 	mChar->mCharSprite.Update(0);
 }
 
-void CTextBox::Print(LPCWSTR tl_1, LPCWSTR tl_2, LPCWSTR tl_3, HDC hdc)
+void CTextBox::Print(const LPCWSTR text[4], HDC hdc)
 {
+	int templinecount = 0;
+
+	while (text[templinecount++]) {}
+	if(lines != templinecount-1) {
+		//CImageFile::Delete(textImg);
+		switch (templinecount-1) {
+		case 1: 
+			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L1), L"UI_TEXTBOX_L1"); break;
+		case 2:
+			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L2), L"UI_TEXTBOX_L2"); break;
+		case 3:
+			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX), L""); break;
+		case 4:
+			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L4), L"UI_TEXTBOX_L4"); break;
+		}
+		mTextImg.mImgFile = textImg;
+		lines = templinecount-1;
+	}
+
 	mTextImg.Draw(hdc);
+
 	mCharBox.Draw(hdc);
 
 	mChar->Draw(hdc);
 
-	TextOutW(hdc, px + 84, py + 15 + gapY * 0, tl_1, wcslen(tl_1));
-	TextOutW(hdc, px + 84, py + 15 + gapY * 1, tl_2, wcslen(tl_2));
-	TextOutW(hdc, px + 84, py + 15 + gapY * 2, tl_3, wcslen(tl_3));
+	for (int i = 0; i < lines; i++) {
+		TextOutW(hdc, px + 84, py + 15 + gapY * i, text[i], wcslen(text[i]));
+	}
 }

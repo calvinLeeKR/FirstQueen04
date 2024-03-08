@@ -35,7 +35,7 @@ void CUnit::Move(int sx, int sy)
 	this->y += sy;
 }
 
-void CUnit::Walk(int dx, int dy)
+void CUnit::Walk(int dx, int dy) //for 4dir image file
 {
 	Move(dx, dy);
 	std::wstring charR = L"char_R";
