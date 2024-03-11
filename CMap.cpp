@@ -56,13 +56,13 @@ void CMap::Draw2(HDC hdc)
 	mBG.mDestY = posY;
 
 	for (CUnit* ic : mCharacters) {
-		ic->UpdateCamPos(0, 0);
+		if(ic)  ic->UpdateCamPos(0, 0);
 	}
 
 	mBG.Draw(hdc);
 
 	for (CUnit* ic : mCharacters) {
-		ic->Draw(hdc);
+		if(ic) ic->Draw(hdc);
 	}
 }
 
@@ -92,8 +92,10 @@ void CMap::AddCharacter(int id, int x, int y, int dir)
 	
 	switch (tempchrptr->id)
 	{
+	case ID_SOLDIER_2: case ID_ARES: case ID_GENELU:
+		tempchrptr->mCharFile.ani->CreateSample4DirectionDead();
+		break;
 	case ID_AERAIN:	case ID_GONRAD:	case ID_ARMORSOLDIER: case ID_FULLARMORSOLDIER:
-	case ID_ARES:
 		tempchrptr->mCharFile.ani->CreateSample4Direction();
 		break;
 	default:

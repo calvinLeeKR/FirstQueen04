@@ -35,6 +35,11 @@ void CUnit::Move(int sx, int sy)
 	this->y += sy;
 }
 
+void CUnit::MoveTo(int sx, int sy) {
+	this->x = sx;
+	this->y = sy;
+}
+
 void CUnit::Walk(int dx, int dy) //for 4dir image file
 {
 	Move(dx, dy);

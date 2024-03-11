@@ -9,6 +9,7 @@ public:
 	~CUnit();
 	void Twitch(int frames);
 	void Move(int x, int y); //단순 이동
+    void MoveTo(int sx, int sy);
 	void Walk(int dx, int dy); //방향, 애니메이션 포함
 	void ChangeAni(std::wstring& pname);
 

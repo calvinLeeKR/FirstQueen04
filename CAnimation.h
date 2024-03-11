@@ -42,6 +42,7 @@ public:
 	void CreateSample();
 	void CreateSampleNPC();
     void CreateSample4Direction();
+    void CreateSample4DirectionDead();
 
 	FrameAnimation* Find(std::wstring& name);
 public:

@@ -12,7 +12,7 @@ CTextBox::CTextBox()
 
 	lines = 0;
 
-	textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX), L"UI_TEXTBOX");
+	textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L4), L"UI_TEXTBOX");
 	charBox = CImageFile::New(MAKEINTRESOURCE(UI_CHARBOX), L"UI_CHARBOX");
 
 	mCharBox.Set(px, py, 0, 0, charBox, RGB(255, 0, 255), CSprite::DrawType_Transparent);
@@ -53,7 +53,7 @@ void CTextBox::Print(const LPCWSTR text[4], HDC hdc)
 {
 	int templinecount = 0;
 
-	while (text[templinecount++]) {}
+	while (text[templinecount++] && templinecount < 5) {}
 	if(lines != templinecount-1) {
 		//CImageFile::Delete(textImg);
 		switch (templinecount-1) {
@@ -63,7 +63,7 @@ void CTextBox::Print(const LPCWSTR text[4], HDC hdc)
 			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L2), L"UI_TEXTBOX_L2"); break;
 		case 3:
 			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX), L""); break;
-		case 4:
+		case 4: case 5:
 			textImg = CImageFile::New(MAKEINTRESOURCE(UI_TEXTBOX_L4), L"UI_TEXTBOX_L4"); break;
 		}
 		mTextImg.mImgFile = textImg;

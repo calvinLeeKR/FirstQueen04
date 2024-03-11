@@ -74,7 +74,6 @@ int textChr[30] = {
 	ID_MACGAIA,
 	ID_GENELU,
 	ID_GENELU,
-	ID_GENELU,
 	ID_OGG,
 	ID_MOLDRED
 };
@@ -85,7 +84,7 @@ const LPCWSTR text[30][4] = {
 	},
 	{
 	L"바르시아왕 제넬루 : 여러분! 난 로그리",
-	L"스의 대표로서 이제껏 많은 어려움을"
+	L"스의 대표로서 이제껏 많은 어려움을",
 	L"극복해 왔소."
 	},
 	{

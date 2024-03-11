@@ -95,8 +95,11 @@ void CGameFQ4::onChangeScene()
 
 void CGameFQ4::onCreate()
 {
-	mIntroS = new CIntroScene;
-	mCurrent = mIntroS;
+	mCastleHall_02 = new CCastleHall_02;
+	mCurrent = mCastleHall_02;
+
+	//mIntroS = new CIntroScene;
+	//mCurrent = mIntroS;
 
 	introCalling = TRUE;
 	isKeyPressed = FALSE;
