@@ -114,6 +114,10 @@ void CUnit::ChangeImg(int mid)
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_FULLARMORSOLDIER), L"OBJ_FULLARMORSOLDIER"); break;
 	case ID_ARES:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_ARES), L"OBJ_ARES"); break;
+	case ID_STONEGOLEM:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_STONEGOLEM), L"OBJ_STONEGOLEM"); break;
+	case ID_GENERAL_01:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_GENERAL1), L"OBJ_GENERAL1"); break;
 	case ID_SOLDIER_2:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER2), L"OBJ_SOLDIER2"); break;
 	}

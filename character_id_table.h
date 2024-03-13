@@ -20,4 +20,6 @@
 #define ID_ARMORSOLDIER		17
 #define ID_FULLARMORSOLDIER	18
 #define ID_ARES				19
-#define ID_SOLDIER_2		20 //dummy
+#define ID_STONEGOLEM		20
+#define	ID_GENERAL_01		21
+#define ID_SOLDIER_2		22 //dummy

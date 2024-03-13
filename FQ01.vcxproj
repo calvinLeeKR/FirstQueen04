@@ -228,6 +228,7 @@
     <Image Include="images\characters\demon01.bmp" />
     <Image Include="images\characters\gabi.bmp" />
     <Image Include="images\characters\genelu.bmp" />
+    <Image Include="images\characters\General01.bmp" />
     <Image Include="images\characters\gonrad.bmp" />
     <Image Include="images\characters\janil.bmp" />
     <Image Include="images\characters\keck.bmp" />
@@ -243,6 +244,7 @@
     <Image Include="images\characters\soldier02.bmp" />
     <Image Include="images\characters\soldier03.bmp" />
     <Image Include="images\characters\soldier04.bmp" />
+    <Image Include="images\characters\stonegolem.bmp" />
     <Image Include="images\characters\thryhoot.bmp" />
     <Image Include="images\citizen_bg.bmp" />
     <Image Include="images\dwarf_bg.bmp" />

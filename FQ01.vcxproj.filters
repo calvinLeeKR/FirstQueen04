@@ -414,5 +414,11 @@
     <Image Include="images\ui_images\ui_textbox_4lines.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="images\characters\stonegolem.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\General01.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>
