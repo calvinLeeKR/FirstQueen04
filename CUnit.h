@@ -3,6 +3,7 @@
 #include "CSprite.h"
 #include "CAnimation.h"
 
+
 class CUnit {
 public:
 	CUnit();
@@ -31,5 +32,8 @@ public:
 
 	int x;
 	int y; //coordinate
+
+	int destX;
+	int destY;
 };
 

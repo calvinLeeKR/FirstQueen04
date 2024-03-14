@@ -2,6 +2,8 @@
 
 #include "CImageFile.h"
 #include "CSprite.h"
+#include "CUnit.h"
+
 
 struct MINIMAP {
 	int origin_x;
@@ -12,7 +14,9 @@ struct MINIMAP {
 	int height;
 };
 
-class CUnit;
+struct TILE {
+	CUnit* unit;
+};
 
 class CMap {
 public:
@@ -31,13 +35,15 @@ public:
 
 	void CharMoves(int moves[5]);
 
-	void Duplicate(CMap* oldMap);
+	void UpdateMap();
 public:
 	std::vector<CUnit*> mCharacters;
 
 	CImageFile* mBackGround;
 
 	CSprite mBG;
+
+	TILE tileMap[70][70];
 
 	int posX;
 	int posY; //map pos

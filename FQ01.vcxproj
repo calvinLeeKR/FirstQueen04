@@ -143,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="CAnimation.h" />
     <ClInclude Include="CApplication.h" />
+    <ClInclude Include="CAStarHandler.h" />
     <ClInclude Include="castlehall_text_02.h" />
     <ClInclude Include="CCastleHall.h" />
     <ClInclude Include="CCastleHall_02.h" />
@@ -182,6 +183,7 @@
   <ItemGroup>
     <ClCompile Include="CAnimation.cpp" />
     <ClCompile Include="CApplication.cpp" />
+    <ClCompile Include="CAStarHandler.cpp" />
     <ClCompile Include="CCastleHall.cpp" />
     <ClCompile Include="CCastleHall_02.cpp" />
     <ClCompile Include="CKarionMeetingRoom.cpp" />

@@ -34,6 +34,9 @@
     <Filter Include="MainScene\03CastleHall">
       <UniqueIdentifier>{25a01acd-a1f0-4b5a-869e-48bf2ef19d0d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algorithm">
+      <UniqueIdentifier>{44ad883a-96d2-4da3-9028-cab0f34d45c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -147,6 +150,9 @@
     <ClInclude Include="CCastleHall_02.h">
       <Filter>MainScene\03CastleHall</Filter>
     </ClInclude>
+    <ClInclude Include="CAStarHandler.h">
+      <Filter>Algorithm</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FQ01.cpp">
@@ -226,6 +232,9 @@
     </ClCompile>
     <ClCompile Include="CCastleHall_02.cpp">
       <Filter>MainScene\03CastleHall</Filter>
+    </ClCompile>
+    <ClCompile Include="CAStarHandler.cpp">
+      <Filter>Algorithm</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

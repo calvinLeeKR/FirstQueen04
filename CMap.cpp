@@ -2,7 +2,6 @@
 #include "CScreen.h"
 #include "CApplication.h"
 #include "CMap.h"
-#include "CUnit.h"
 #include "resource.h"
 #include "character_id_table.h"
 
@@ -109,6 +108,8 @@ void CMap::AddCharacter(int id, int x, int y, int dir)
 	tempchrptr->mCharSprite.Set2(tempstr, x, y, tempchrptr->mCharFile.ani, tempchrptr->mCharFile.imgFile, RGB(255, 0, 255), CSprite::DrawType_Transparent);
 	tempchrptr->mCharSprite.Update(0);
 
+	tileMap[tempchrptr->x][tempchrptr->y].unit = tempchrptr;
+
 	mCharacters.push_back(tempchrptr);
 }
 
@@ -153,11 +154,17 @@ void CMap::CharMoves(int moves[5])
 	}
 }
 
-void CMap::Duplicate(CMap* oldMap)
-{
-	mCharacters = oldMap->mCharacters;
-	mBackGround = oldMap->mBackGround;
-	mBG = oldMap->mBG;
-	posX = 0;
-	posY = 0;
+void CMap::UpdateMap()
+{	
+	for (int i = 0; i < 100; i++) {
+		for (int j = 0; j < 100; j++) {
+			tileMap[i][j].unit = nullptr;
+		}
+	}
+	for (CUnit* ic : mCharacters) {
+		tileMap[ic->x][ic->y].unit = ic;
+		tileMap[ic->x+1][ic->y].unit = ic;
+		tileMap[ic->x][ic->y+1].unit = ic;
+		tileMap[ic->x+1][ic->y+1].unit = ic;
+	}
 }
