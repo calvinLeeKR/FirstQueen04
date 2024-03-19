@@ -2,7 +2,7 @@
 #include "CImageFile.h"
 #include "CSprite.h"
 #include "CAnimation.h"
-
+#include "CAStarHandler.h"
 
 class CUnit {
 public:
@@ -13,6 +13,9 @@ public:
     void MoveTo(int sx, int sy);
 	void Walk(int dx, int dy); //방향, 애니메이션 포함
 	void ChangeAni(std::wstring& pname);
+	
+	void pathFind(int destX, int destY, CMap* cmap);
+	bool trackingPath();
 
 	void UpdateCamPos(float cx, float cy);
 	void Draw(HDC hdc);
@@ -25,6 +28,8 @@ public:
 
 	ANIM_FILE	mCharFile;
 	CFrameSprite mCharSprite;
+
+	CAStarHandler* mAStarHandler;
 
 	int selfAnimFrame;
 

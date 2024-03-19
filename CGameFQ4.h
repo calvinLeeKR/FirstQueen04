@@ -16,6 +16,8 @@ class CStartMenu;
 class CCastleHall;
 class CKarionMeetingRoom;
 class CCastleHall_02;
+class CField;
+
 
 class CGameFQ4 : public IGame {
 public:
@@ -47,5 +49,6 @@ public:
 	CCastleHall*			mCastleHall;
 	CKarionMeetingRoom*		mKarionMeetingRoom;
 	CCastleHall_02*			mCastleHall_02;
+	CField*					mField;
 };
 

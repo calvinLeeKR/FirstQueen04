@@ -3,17 +3,16 @@
 #include "CMap.h"
 #include "CUnit.h"
 
+int costX[4] = { 0, -1, 1, 0 };
+int costY[4] = { -1, 0, 0, 1 };
+
 CAStarHandler::CAStarHandler()
 {
-	int tcostX[4] = { 0, -1, 1, 0 };
-	int tcostY[4] = { -1, 0, 0, 1 };
-
-	costX = tcostX;
-	costY = tcostY;
-
-	for (int i = 0; i < 70; i++) {
-		for (int j = 0; j < 70; j++) {
-			openMap[i][j] = INT32_MAX; //가중치 최대
+	for (int i = 0; i < mapX; i++) {
+		for (int j = 0; j < mapY; j++) {
+			openMap[i][j] = 1000; //가중치 높은값 채움
+			closedMap[i][j] = FALSE;
+			parent[i][j] = { 0, 0, 0, 0 };//initialize
 		}
 	}
 }
@@ -22,50 +21,63 @@ CAStarHandler::~CAStarHandler()
 {
 }
 
-int CAStarHandler::GetManhattonDist(int curX, int curY, int destY, int destX)
+int CAStarHandler::GetManhattonDist(int curX, int curY, int destX, int destY)
 {
-	return (destX - curX) + (destY - curY);
+	return abs(destX - curX) + abs(destY - curY);
 }
 
-void CAStarHandler::AStar(int x, int y, int destX, int destY, CMap* cmap)
+void CAStarHandler::RunAStar(int x, int y, int destX, int destY, CMap* cmap)
 {
+	pq.push({x, y, 0, GetManhattonDist(x, y, destX, destY) }); //시작점 노드 추가
+
 	while (pq.size() > 0) {
-		NODE* node = pq.top(); //우선순위 큐에서 pop, 가중치 제일 작은것
+		NODE node = pq.top(); //우선순위 큐에서 pop, 가중치 제일 작은것
 		pq.pop();
 
-		if (closedMap[node->x][node->y]) continue; //이미 방문한 노드면 스킵
+		if (closedMap[node.x][node.y]) continue; //이미 방문한 노드면 스킵
+		closedMap[node.x][node.y] = TRUE; //현재 노드 방문처리
 
-		closedMap[node->x][node->y] = TRUE; //현재 노드 방문처리
-
-		if (node->x == destX && node->y == destY) break;
+		if (node.x == destX && node.y == destY) {
+			break; //목적지면 끝
+		}
 
 		for (int i = 0; i < 4; i++) {
-			int nextX = node->x + costX[i];
-			int nextY = node->y + costY[i];
+			int nextX = node.x + costX[i];
+			int nextY = node.y + costY[i];
 
-			if (nextX < 0 || nextX > 70 || nextY < 0 || nextY > 70)
+			if (nextX < 0 || nextX > mapX || nextY < 0 || nextY > mapY)
 				continue; //맵 밖 나가면 스킵
 			if (cmap->tileMap[nextX][nextY].unit)
+				if (nextX == destX && nextY == destY) {
+					parent[nextX][nextY].x = node.x;
+					parent[nextX][nextY].y = node.y;
+					break;
+				}
 				continue; //방문하려는 곳에 유닛이 있다면 스킵
 			if (closedMap[nextX][nextY])
 				continue; //이미 방문한 노드면 스킵
 
-			int tempG = node->g + costX[i] + costY[i];
-			int tempH = abs(destX - nextX) + abs(destY - nextY); //G, H value 계산
+			int tempG = node.g + 1; //지나온 비용 계산
+			int tempH = GetManhattonDist(nextX, nextY, destX, destY); //G, H value 계산
 
-			if (openMap[nextX][nextX] < tempG) continue; //가중치 비교
+			if (openMap[nextX][nextY] < tempG + tempH) continue; //가중치 비교
 
 			openMap[nextX][nextY] = tempG + tempH; //가중치 저장
 
-			NODE* newNode = new NODE();
-			newNode->g = tempG;
-			newNode->x = nextX;
-			newNode->y = nextY;
-			pq.push(newNode); //우선순위 큐에 추가
+			pq.push({nextX, nextY, tempG, tempG + tempH}); //우선순위 큐에 추가
 
-			parent[nextX][nextY].x = node->x;
-			parent[nextX][nextY].y = node->y;
+			parent[nextX][nextY].x = node.x;
+			parent[nextX][nextY].y = node.y;
 		}
+	}
+
+	//if (pq.size() == 0) return; //길 못찾으면 종료
+
+	NODE traversal = { destX, destY, 0, 0 };
+	path.push(traversal);
+	while (traversal.x != x && traversal.y != y) {
+		traversal = parent[traversal.x][traversal.y];
+		path.push({ traversal.x, traversal.y, 0, 0 });
 	}
 }
 

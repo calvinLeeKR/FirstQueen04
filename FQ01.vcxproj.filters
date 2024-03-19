@@ -37,6 +37,9 @@
     <Filter Include="Algorithm">
       <UniqueIdentifier>{44ad883a-96d2-4da3-9028-cab0f34d45c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MainScene\04Field">
+      <UniqueIdentifier>{dcb86c72-20c4-43bb-b092-712bad3549e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -153,6 +156,12 @@
     <ClInclude Include="CAStarHandler.h">
       <Filter>Algorithm</Filter>
     </ClInclude>
+    <ClInclude Include="field_text.h">
+      <Filter>MainScene\04Field</Filter>
+    </ClInclude>
+    <ClInclude Include="CField.h">
+      <Filter>MainScene\04Field</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FQ01.cpp">
@@ -235,6 +244,9 @@
     </ClCompile>
     <ClCompile Include="CAStarHandler.cpp">
       <Filter>Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="CField.cpp">
+      <Filter>MainScene\04Field</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

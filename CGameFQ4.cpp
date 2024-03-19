@@ -15,6 +15,7 @@
 #include "CCastleHall.h"
 #include "CKarionMeetingRoom.h"
 #include "CCastleHall_02.h"
+#include "CField.h"
 
 #include "CGameFQ4.h"
 
@@ -95,11 +96,11 @@ void CGameFQ4::onChangeScene()
 
 void CGameFQ4::onCreate()
 {
-	//mCastleHall_02 = new CCastleHall_02;
-	//mCurrent = mCastleHall_02;
+	mField = new CField;
+	mCurrent = mField;
 
-	mIntroS = new CIntroScene;
-	mCurrent = mIntroS;
+	//mIntroS = new CIntroScene;
+	//mCurrent = mIntroS;
 
 	introCalling = TRUE;
 	isKeyPressed = FALSE;

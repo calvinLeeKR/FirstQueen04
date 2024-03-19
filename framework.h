@@ -17,4 +17,5 @@
 #include <vector>
 #include <string>
 #include <queue>
+#include <stack>
 #include <math.h>

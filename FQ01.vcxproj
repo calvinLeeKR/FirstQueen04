@@ -147,6 +147,7 @@
     <ClInclude Include="castlehall_text_02.h" />
     <ClInclude Include="CCastleHall.h" />
     <ClInclude Include="CCastleHall_02.h" />
+    <ClInclude Include="CField.h" />
     <ClInclude Include="CKarionMeetingRoom.h" />
     <ClInclude Include="CTextBox.h" />
     <ClInclude Include="CUnit.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="CMemoryBitmap.h" />
     <ClInclude Include="CScreen.h" />
     <ClInclude Include="CStartMenu.h" />
+    <ClInclude Include="field_text.h" />
     <ClInclude Include="IGame.h" />
     <ClInclude Include="CImageFile.h" />
     <ClInclude Include="intro_text.h" />
@@ -186,6 +188,7 @@
     <ClCompile Include="CAStarHandler.cpp" />
     <ClCompile Include="CCastleHall.cpp" />
     <ClCompile Include="CCastleHall_02.cpp" />
+    <ClCompile Include="CField.cpp" />
     <ClCompile Include="CKarionMeetingRoom.cpp" />
     <ClCompile Include="CTextBox.cpp" />
     <ClCompile Include="CUnit.cpp" />

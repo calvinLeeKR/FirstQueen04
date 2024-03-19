@@ -161,10 +161,12 @@ void CMap::UpdateMap()
 			tileMap[i][j].unit = nullptr;
 		}
 	}
-	for (CUnit* ic : mCharacters) {
-		tileMap[ic->x][ic->y].unit = ic;
-		tileMap[ic->x+1][ic->y].unit = ic;
-		tileMap[ic->x][ic->y+1].unit = ic;
-		tileMap[ic->x+1][ic->y+1].unit = ic;
+	for (auto ic : mCharacters) {
+		if (ic) {
+			tileMap[ic->x][ic->y].unit = ic;
+			tileMap[ic->x + 1][ic->y].unit = ic;
+			tileMap[ic->x][ic->y + 1].unit = ic;
+			tileMap[ic->x + 1][ic->y + 1].unit = ic;
+		}
 	}
 }
