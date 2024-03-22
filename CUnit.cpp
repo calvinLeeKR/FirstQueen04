@@ -131,10 +131,11 @@ void CUnit::ChangeAni(std::wstring& pname)
 	mCharSprite.Update(0);
 }
 
-void CUnit::pathFind(int destX, int destY, CMap* cmap, CUnit* cunit)
+void CUnit::pathFind(int destX, int destY, CMap* cmap)
 {
 	mAStarHandler = new CAStarHandler();
-	mAStarHandler->RunAStar(x, y, destX, destY, cmap, cunit);
+	mAStarHandler->RunAStar(x, y, destX, destY, cmap, this);
+	isMoving = true;
 }
 
 bool CUnit::trackingPath()
@@ -144,13 +145,16 @@ bool CUnit::trackingPath()
 			NODE* nextStep = mAStarHandler->path.top();
 			Walk(nextStep->x - x, nextStep->y - y); //이동하고
 			mAStarHandler->path.pop(); //경로 하나 제거
+			isMoving = true;
 			return true; //탐색중이다
 		}
 		else {
 			delete mAStarHandler;
+			isMoving = false;
 			return false; //끝났다
 		}
 	}
+	isMoving = false;
 	return false;
 }
 

@@ -14,7 +14,7 @@ public:
 	void Walk(int dx, int dy); //방향, 애니메이션 포함
 	void ChangeAni(std::wstring& pname);
 	
-	void pathFind(int destX, int destY, CMap* cmap, CUnit* cunit);
+	void pathFind(int destX, int destY, CMap* cmap);
 	bool trackingPath();
 
 	void UpdateCamPos(float cx, float cy);
@@ -40,5 +40,7 @@ public:
 
 	int destX;
 	int destY;
+
+	bool isMoving;
 };
 

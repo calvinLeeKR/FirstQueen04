@@ -156,8 +156,8 @@ void CMap::CharMoves(int moves[5])
 
 void CMap::UpdateMap()
 {	
-	for (int i = 0; i < 100; i++) {
-		for (int j = 0; j < 100; j++) {
+	for (int i = 0; i < 70; i++) {
+		for (int j = 0; j < 70; j++) {
 			tileMap[i][j].unit = nullptr;
 		}
 	}
