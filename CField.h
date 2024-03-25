@@ -22,8 +22,7 @@ public:
 
 	CTextBox* mTxtBox;
 
-	CImageFile* mBG_CastleHall;
-	CImageFile* mBG_CastleHallMini;
+	CImageFile* mBG_Field;
 
 	CImageFile* mUI_Frame;
 	CImageFile* mUI_PlaceTBox;

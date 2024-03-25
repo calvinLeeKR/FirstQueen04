@@ -22,4 +22,8 @@
 #define ID_ARES				19
 #define ID_STONEGOLEM		20
 #define	ID_GENERAL_01		21
-#define ID_SOLDIER_2		22 //dummy
+#define ID_LIGHTSOLDIER		22
+#define ID_HORSESOLDIER_1	23
+#define ID_HORSESOLDIER_2	24
+#define ID_HORSEGENERAL_1	25
+#define ID_SOLDIER_2		26 //dummy

@@ -22,13 +22,12 @@ CField::CField()
 	m_minimap.origin_y = 50;
 	//minimap initialize
 
-	mBG_CastleHall = CImageFile::New(MAKEINTRESOURCE(CBG_CASTLEHALL), L"CBG_CASTLEHALL");
+	mBG_Field = CImageFile::New(MAKEINTRESOURCE(CBG_FIELD), L"CBG_FIELD");
 
 	mUI_MapFrame = CImageFile::New(MAKEINTRESOURCE(UI_MAPFRAME_MINI), L"UI_MAPFRAME_MINI");
 	mUI_Frame = CImageFile::New(MAKEINTRESOURCE(UI_FRAME), L"UI_FRAME");
 	mUI_PlaceTBox = CImageFile::New(MAKEINTRESOURCE(UI_PLACEBOX), L"UI_PLACEBOX");
 	mUI_Status = CImageFile::New(MAKEINTRESOURCE(UI_STATUS), L"UI_STATUS");
-
 
 	mUIFrame.Set(0, 0, 0, 0, mUI_Frame, 0, CSprite::DrawType_Transparent);
 	mUIFrame.mTransColor = RGB(255, 0, 255);
@@ -38,10 +37,11 @@ CField::CField()
 	mUIMapFrame.Set(192 - 16, -150, 0, 0, mUI_MapFrame, RGB(255, 0, 255), CSprite::DrawType_Transparent);
 	//ui initialize
 
-	//map initialize
-
-	for (int i = 0; i < 20; i++) {
+	mMap->ChangeBGImage(mBG_Field);
+	mMap->CameraMove(0, 140);
+	for (int i = 0; i < 40; i++) {
 		mMap->AddCharacter(chrToAdd_03[i][0], chrToAdd_03[i][1] + 1, chrToAdd_03[i][2], chrToAdd_03[i][3]);
+		mMap->mCharacters[i]->mCharSprite.Update(500);
 	}
 	//character add
 
@@ -81,8 +81,8 @@ void CField::onFrameMove()
 
 	switch (sceneOrder) {
 	case 0:
-		if (frameCount < 80) {
-			mMap->CameraMove(0, 4);
+		if (frameCount < 78) {
+			mMap->CameraMove(0, -2);
 			frameCount++;
 		}
 		else {
@@ -94,13 +94,18 @@ void CField::onFrameMove()
 		if (frameCount < 10) {
 			if (frameCount % 10 == 0) {
 				mMap->UpdateMap();
-				mMap->mCharacters[19]->pathFind(5, 30, mMap);
+				for (int i = 0; i < 7; i++) {
+					mMap->mCharacters[i]->pathFind(10, 40, mMap);
+				}
 			}
 		}
-		else if (frameCount < 500) {
+		else if (frameCount < 1000) {
 			if (frameCount % 5 == 0) {
-				if(mMap->mCharacters[19]->isMoving)
-					mMap->mCharacters[19]->trackingPath();
+				for (int i = 0; i < 21; i++) {
+					if (mMap->mCharacters[i]->isMoving){
+						mMap->mCharacters[i]->trackingPath(mMap);
+					}
+				}
 			}
 		}
 		else {

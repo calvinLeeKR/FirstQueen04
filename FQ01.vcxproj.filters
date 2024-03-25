@@ -441,5 +441,20 @@
     <Image Include="images\characters\General01.bmp">
       <Filter>리소스 파일</Filter>
     </Image>
+    <Image Include="images\backgrounds\battlefield.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\enemygeneral.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\horseacter.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\horsesoldier01.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="images\characters\soldier05.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

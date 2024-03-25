@@ -91,12 +91,15 @@ void CMap::AddCharacter(int id, int x, int y, int dir)
 	
 	switch (tempchrptr->id)
 	{
-	case ID_SOLDIER_2: case ID_ARES: case ID_GENELU:
+	case ID_SOLDIER_2: case ID_ARES: case ID_GENELU: case ID_LIGHTSOLDIER:
 		tempchrptr->mCharFile.ani->CreateSample4DirectionDead();
 		break;
 	case ID_AERAIN:	case ID_GONRAD:	case ID_ARMORSOLDIER: case ID_FULLARMORSOLDIER:
 	case ID_STONEGOLEM:
 		tempchrptr->mCharFile.ani->CreateSample4Direction();
+		break;
+	case ID_HORSESOLDIER_2: case ID_HORSESOLDIER_1: case ID_HORSEGENERAL_1:
+		tempchrptr->mCharFile.ani->CreateSample4D48();
 		break;
 	default:
 		tempchrptr->mCharFile.ani->CreateSampleNPC();
@@ -135,7 +138,7 @@ void CMap::CharMoves(int moves[5])
 	}
 
 	if (mCharacters[moves[2]]) {
-		mCharacters[moves[2]]->Move(moves[3], moves[4]);
+		mCharacters[moves[2]]->Move(moves[3], moves[4], this);
 		moves[3] = 0;
 		moves[4] = 0;
 	}

@@ -86,7 +86,7 @@ void CKarionMeetingRoom::onFrameMove()
 	case 1: //char move
 		if (frameCount <= 90) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[9]->Walk(1, 0);
+				mMap->mCharacters[9]->Walk(1, 0, mMap);
 				switch (frameCount / 10) {
 				case 0:
 					mMap->mCharacters[3]->ChangeAni(charR);
@@ -107,7 +107,7 @@ void CKarionMeetingRoom::onFrameMove()
 		}
 		else if (frameCount <= 150) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[9]->Walk(0, -1);
+				mMap->mCharacters[9]->Walk(0, -1, mMap);
 				switch (frameCount / 10 - 9) {
 				case 1:
 					mMap->mCharacters[1]->ChangeAni(charR);
@@ -127,17 +127,17 @@ void CKarionMeetingRoom::onFrameMove()
 	case 4:
 		if (frameCount <= 5) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[8]->Walk(0, -1);
+				mMap->mCharacters[8]->Walk(0, -1, mMap);
 			}
 		}
 		else if (frameCount <= 45) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[8]->Walk(1, 0);
+				mMap->mCharacters[8]->Walk(1, 0, mMap);
 			}
 		}
 		else if (frameCount <= 65) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[8]->Walk(0, 1);
+				mMap->mCharacters[8]->Walk(0, 1, mMap);
 			}
 		}
 		else {
@@ -149,7 +149,7 @@ void CKarionMeetingRoom::onFrameMove()
 	case 12:
 		if (frameCount <= 25) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[9]->Walk(0, 1);
+				mMap->mCharacters[9]->Walk(0, 1, mMap);
 				switch (frameCount / 5) {
 				case 0:
 					mMap->mCharacters[6]->ChangeAni(charL);
@@ -159,7 +159,7 @@ void CKarionMeetingRoom::onFrameMove()
 		}
 		else if (frameCount <= 75) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[9]->Walk(-1, 0);
+				mMap->mCharacters[9]->Walk(-1, 0, mMap);
 				switch (frameCount / 5 - 5) {
 				case 1:
 					mMap->mCharacters[1]->ChangeAni(charF);
@@ -177,12 +177,12 @@ void CKarionMeetingRoom::onFrameMove()
 		}
 		else if (frameCount <= 85) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[9]->Walk(0, 1);
+				mMap->mCharacters[9]->Walk(0, 1, mMap);
 			}
 		}
 		else if (frameCount <= 95) {
 			if (frameCount % 5 == 0) {
-				mMap->mCharacters[10]->Walk(0, -1);
+				mMap->mCharacters[10]->Walk(0, -1, mMap);
 			}
 		}
 		else {
@@ -194,12 +194,12 @@ void CKarionMeetingRoom::onFrameMove()
 	case 15:
 		if (frameCount <= 10) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[9]->Walk(1, 0);
+				mMap->mCharacters[9]->Walk(1, 0, mMap);
 			}
 		}
 		else if (frameCount <= 60) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[9]->Walk(0, 1);
+				mMap->mCharacters[9]->Walk(0, 1, mMap);
 				switch (frameCount / 10 - 1)
 				{
 				case 0:
@@ -212,14 +212,14 @@ void CKarionMeetingRoom::onFrameMove()
 		else if (frameCount <= 80) {}
 		else if (frameCount <= 100) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[3]->Walk(1, 0);
-				mMap->mCharacters[4]->Walk(-1, 0);
+				mMap->mCharacters[3]->Walk(1, 0, mMap);
+				mMap->mCharacters[4]->Walk(-1, 0, mMap);
 			}
 		}
 		else if (frameCount <= 140) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[3]->Walk(0, 1);
-				mMap->mCharacters[4]->Walk(0, 1);
+				mMap->mCharacters[3]->Walk(0, 1, mMap);
+				mMap->mCharacters[4]->Walk(0, 1, mMap);
 			}
 		}
 		else if (frameCount > 160) isSceneEnded = TRUE;

@@ -4,18 +4,20 @@
 #include "CAnimation.h"
 #include "CAStarHandler.h"
 
+class CMap;
+
 class CUnit {
 public:
 	CUnit();
 	~CUnit();
 	void Twitch(int frames);
-	void Move(int x, int y); //단순 이동
+	bool Move(int x, int y, CMap* cmap); //단순 이동
     void MoveTo(int sx, int sy);
-	void Walk(int dx, int dy); //방향, 애니메이션 포함
+	bool Walk(int dx, int dy, CMap* cmap); //방향, 애니메이션 포함
 	void ChangeAni(std::wstring& pname);
 	
 	void pathFind(int destX, int destY, CMap* cmap);
-	bool trackingPath();
+	bool trackingPath(CMap* cmap);
 
 	void UpdateCamPos(float cx, float cy);
 	void Draw(HDC hdc);
@@ -34,6 +36,8 @@ public:
 	int selfAnimFrame;
 
 	int id;
+
+	int size;
 
 	int x;
 	int y; //coordinate

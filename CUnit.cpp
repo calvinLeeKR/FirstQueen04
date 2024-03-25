@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CUnit.h"
+#include "CMap.h"
 #include "character_id_table.h"
 #include "resource.h"
 
@@ -9,6 +10,8 @@ CUnit::CUnit()
 	//mCharImg.Set(0, 0, 0, 0, charImg, RGB(255,0,255), CSprite::DrawType_Transparent);
 	//normal unit sample
 	selfAnimFrame = 0;
+
+	size = 2;
 
 	mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER2), L"OBJ_SOLDIER2");
 	mCharFile.ani = new CAnimation;
@@ -29,8 +32,10 @@ void CUnit::Twitch(int frames)
 	mCharSprite.Update(frames);
 }
 
-void CUnit::Move(int sx, int sy)
+bool CUnit::Move(int sx, int sy, CMap* cmap)
 {
+	if (cmap->tileMap[x + sx][y + sy].unit) return false; //충돌판정시 false 반환
+
 	this->x += sx;
 	this->y += sy;
 }
@@ -40,9 +45,9 @@ void CUnit::MoveTo(int sx, int sy) {
 	this->y = sy;
 }
 
-void CUnit::Walk(int dx, int dy) //for 4dir image file
+bool CUnit::Walk(int dx, int dy, CMap* cmap) //for 4dir image file
 {
-	Move(dx, dy);
+	bool toReturn = Move(dx, dy, cmap);
 	std::wstring charR = L"char_R";
 	std::wstring charL = L"char_L";
 	std::wstring charF = L"char_F";
@@ -53,6 +58,8 @@ void CUnit::Walk(int dx, int dy) //for 4dir image file
 	else if (dx == 0 && dy < 0) mCharSprite.ChangeAnimation(charB);
 	mCharSprite.Update((selfAnimFrame % 2) * 500);
 	selfAnimFrame++;
+
+	return toReturn; //충돌시 false 반환
 }
 
 void CUnit::UpdateCamPos(float cx, float cy)
@@ -118,8 +125,26 @@ void CUnit::ChangeImg(int mid)
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_STONEGOLEM), L"OBJ_STONEGOLEM"); break;
 	case ID_GENERAL_01:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_GENERAL1), L"OBJ_GENERAL1"); break;
+	case ID_LIGHTSOLDIER:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_LIGHTSOLDIER), L"OBJ_LIGHTSOLDIER"); break;
+	case ID_HORSESOLDIER_1:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_HORSESOLDIER01), L"OBJ_HORSESOLDIER01"); break;
+	case ID_HORSESOLDIER_2:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_HORSESOLDIER02), L"OBJ_HORSESOLDIER02"); break;
+	case ID_HORSEGENERAL_1:
+		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_HORSEGENERAL01), L"OBJ_HORSEGENERAL01"); break;
 	case ID_SOLDIER_2:
 		mCharFile.imgFile = CImageFile::New(MAKEINTRESOURCE(OBJ_SOLDIER2), L"OBJ_SOLDIER2"); break;
+
+	}
+
+	switch (mid)
+	{
+	case ID_HORSEGENERAL_1: case ID_HORSESOLDIER_1: case ID_HORSESOLDIER_2:
+		size = 3;
+		break;
+	default:
+		break;
 	}
 
 	this->id = mid;
@@ -138,12 +163,12 @@ void CUnit::pathFind(int destX, int destY, CMap* cmap)
 	isMoving = true;
 }
 
-bool CUnit::trackingPath()
+bool CUnit::trackingPath(CMap* cmap)
 {
 	if (mAStarHandler) {
 		if (!mAStarHandler->path.empty()) { //경로가 남아있다면
 			NODE* nextStep = mAStarHandler->path.top();
-			Walk(nextStep->x - x, nextStep->y - y); //이동하고
+			Walk(nextStep->x - x, nextStep->y - y, cmap); //이동하고
 			mAStarHandler->path.pop(); //경로 하나 제거
 			isMoving = true;
 			return true; //탐색중이다

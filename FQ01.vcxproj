@@ -219,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="FQ01.ico" />
+    <Image Include="images\backgrounds\battlefield.bmp" />
     <Image Include="images\backgrounds\castlehall_bg.bmp" />
     <Image Include="images\backgrounds\castlehall_bg_mini.bmp" />
     <Image Include="images\backgrounds\karion_meetingroom.bmp" />
@@ -231,10 +232,13 @@
     <Image Include="images\characters\ares.bmp" />
     <Image Include="images\characters\bitmap3.bmp" />
     <Image Include="images\characters\demon01.bmp" />
+    <Image Include="images\characters\enemygeneral.bmp" />
     <Image Include="images\characters\gabi.bmp" />
     <Image Include="images\characters\genelu.bmp" />
     <Image Include="images\characters\General01.bmp" />
     <Image Include="images\characters\gonrad.bmp" />
+    <Image Include="images\characters\horseacter.bmp" />
+    <Image Include="images\characters\horsesoldier01.bmp" />
     <Image Include="images\characters\janil.bmp" />
     <Image Include="images\characters\keck.bmp" />
     <Image Include="images\characters\laios.bmp" />
@@ -249,6 +253,7 @@
     <Image Include="images\characters\soldier02.bmp" />
     <Image Include="images\characters\soldier03.bmp" />
     <Image Include="images\characters\soldier04.bmp" />
+    <Image Include="images\characters\soldier05.bmp" />
     <Image Include="images\characters\stonegolem.bmp" />
     <Image Include="images\characters\thryhoot.bmp" />
     <Image Include="images\citizen_bg.bmp" />

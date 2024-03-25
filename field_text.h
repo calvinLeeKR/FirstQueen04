@@ -3,27 +3,47 @@
 #include "pch.h"
 #include "character_id_table.h"
 
-int chrToAdd_03[30][4] = { //id, x, y, direction //front = 0, other = 1, left = 10, right = 11, back = 12, action = 13
-	{ID_SOLDIER, 12, 9, 0},			//0
-	{ID_SOLDIER, 24, 9, 0},
-	{ID_SOLDIER_2, 2, 30, 11},
-	{ID_SOLDIER_2, 8, 30, 11},
-	{ID_SOLDIER_2, 5, 32, 11},		//4
-	{ID_SOLDIER_2, 2, 34, 11},
-	{ID_SOLDIER_2, 8, 34, 11},
-	{ID_SOLDIER_2, 5, 36, 11},
-	{ID_SOLDIER_2, 28, 30, 10},
-	{ID_SOLDIER_2, 31, 32, 10},		//9
-	{ID_SOLDIER_2, 28, 34, 10},
-	{ID_SOLDIER_2, 34, 30, 10},
-	{ID_SOLDIER_2, 31, 36, 10},
-	{ID_SOLDIER_2, 34, 34, 10},		
-	{ID_SOLDIER_2, 14, 30, 0},		//14
-	{ID_SOLDIER_2, 22, 30, 0},
-	{ID_SOLDIER_2, 12, 32, 11},
-	{ID_SOLDIER_2, 24, 32, 10},
-	{ID_GENELU, 18, 26, 0},			//18
-	{ID_ARES, 18, 35, 12}			//19
+int chrToAdd_03[40][4] = { //id, x, y, direction //front = 0, other = 1, left = 10, right = 11, back = 12, action = 13
+	{ID_SOLDIER_2, 8, 2, 0},		//0
+	{ID_SOLDIER_2, 11, 2, 0},
+	{ID_SOLDIER_2, 14, 2, 0},
+	{ID_SOLDIER_2, 21, 2, 0},
+	{ID_SOLDIER_2, 24, 2, 0},		//4
+	{ID_SOLDIER_2, 27, 2, 0},
+	{ID_SOLDIER_2, 5, 5, 11},
+	{ID_SOLDIER_2, 8, 5, 0},
+	{ID_SOLDIER_2, 11, 5, 0},
+	{ID_SOLDIER_2, 14, 5, 0},		//9
+	{ID_SOLDIER_2, 21, 5, 0},
+	{ID_SOLDIER_2, 24, 5, 0},
+	{ID_SOLDIER_2, 27, 5, 0},
+	{ID_SOLDIER_2, 30, 5, 10},		
+	{ID_SOLDIER_2, 16, 7, 0},		//14
+	{ID_SOLDIER_2, 19, 7, 0},
+	{ID_SOLDIER_2, 2, 8, 11},
+	{ID_SOLDIER_2, 2, 11, 11},
+	{ID_SOLDIER_2, 2, 14, 11},
+	{ID_SOLDIER_2, 5, 9, 11},		//19
+	{ID_SOLDIER_2, 5, 12, 11},
+	{ID_SOLDIER_2, 8, 8, 11},
+	{ID_SOLDIER_2, 12, 8, 0},
+	{ID_SOLDIER_2, 23, 8, 0},
+	{ID_SOLDIER_2, 27, 8, 10},		//24
+	{ID_SOLDIER_2, 30, 9, 10},
+	{ID_SOLDIER_2, 30, 12, 10},
+	{ID_SOLDIER_2, 33, 8, 10},
+	{ID_SOLDIER_2, 33, 11, 10},
+	{ID_SOLDIER_2, 33, 14, 10},		//29
+	{ID_HORSEGENERAL_1, 17, 3, 12},	//30
+	{ID_HORSESOLDIER_1, 13, 11, 11},	
+	{ID_HORSESOLDIER_1, 21, 11, 10},
+	{ID_LIGHTSOLDIER, 9, 16, 11},
+	{ID_LIGHTSOLDIER, 11, 19, 11},	//34
+	{ID_LIGHTSOLDIER, 13, 16, 11},
+	{ID_HORSESOLDIER_2, 17, 16, 12},
+	{ID_LIGHTSOLDIER, 22, 16, 10},
+	{ID_LIGHTSOLDIER, 24, 19, 10},
+	{ID_LIGHTSOLDIER, 26, 16, 10},	//39
 };
 
 int ChrActs_03[30][7] = { // id, if:Twitch(), Move{id, x, y}, ChangeAni(id, string)
@@ -47,21 +67,17 @@ const LPCWSTR text_03[30][4] = {
 	{
 	},
 	{
-	L"아레스:⋯그러므로 바르시아의 왕이여!",
-	L"신의 섭리에 따라 당신이 만든 병사들",
-	L"을 가능한 빨리 처분하여 주기 바라오."
+	L"적장:포기해라! 너의 아레스는 우리",
+	L"군대에게 잡혔다. 덤빌수록 그 녀석의",
+	L"목숨만 짧아 질 뿐이다!"
 	},
 	{
-	L"제넬루:카리온의 생각은 이미 알고 있",
-	L"다. 그러나 나의 병사는 나의 아들과",
-	L"마찬가지. 처분할 수는 없다. 필요하다면",
-	L"나누어 주지."
+	L"애크터:윽! 후퇴하라! 그러나 난 물",
+	L"러서지 않는다! 여기서 죽어도 후회는",
+	L"없다!"
 	},
 	{
-	L"닥치시오! 당신이 만든 악마때문에 백",
-	L"성들도 고통받고 있소! 사람들을 몰아",
-	L"내고 로그리스를 당신의 쓰레기로 채울",
-	L"생각이오!"
+	L"병사 : 우리도 싸우자 !!"
 	},
 	{
 	L"으악! 모, 몸이⋯?!"

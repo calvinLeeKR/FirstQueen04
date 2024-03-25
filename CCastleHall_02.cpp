@@ -100,28 +100,28 @@ void CCastleHall_02::onFrameMove()
 			textReady = TRUE;
 		}
 		else if (frameCount == 10) {
-			mMap->mCharacters[19]->Walk(0, -1);
+			mMap->mCharacters[19]->Walk(0, -1, mMap);
 		}
 		frameCount++;
 		break;
 	case 4:
 		if (frameCount < 30) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[19]->Walk(0, -1);
+				mMap->mCharacters[19]->Walk(0, -1, mMap);
 			}
 		}
 		else if (frameCount < 50) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[14]->Walk(1, 0);
-				mMap->mCharacters[16]->Walk(1, 0);
-				mMap->mCharacters[15]->Walk(-1, 0);
-				mMap->mCharacters[17]->Walk(-1, 0);
+				mMap->mCharacters[14]->Walk(1, 0, mMap);
+				mMap->mCharacters[16]->Walk(1, 0, mMap);
+				mMap->mCharacters[15]->Walk(-1, 0, mMap);
+				mMap->mCharacters[17]->Walk(-1, 0, mMap);
 			}
 		}
 		else if (frameCount < 70) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[16]->Walk(1, 0);
-				mMap->mCharacters[17]->Walk(-1, 0);
+				mMap->mCharacters[16]->Walk(1, 0, mMap);
+				mMap->mCharacters[17]->Walk(-1, 0, mMap);
 			}
 		}
 		else if (frameCount < 200) {
@@ -182,7 +182,7 @@ void CCastleHall_02::onFrameMove()
 		}
 		else if (frameCount < 320) {
 			if (frameCount % 10 == 0) {
-				mMap->mCharacters[15]->Walk(0, -1); //ares : 15
+				mMap->mCharacters[15]->Walk(0, -1, mMap); //ares : 15
 			}
 		}
 		else if (frameCount == 320) {
@@ -281,13 +281,13 @@ void CCastleHall_02::onFrameMove()
 		frameCount++;
 		break; //scroll
 	case 12:
-		if (frameCount == 0) mMap->mCharacters[15]->Move(0, 1);
+		if (frameCount == 0) mMap->mCharacters[15]->Move(0, 1, mMap);
 		if (frameCount < 110) {
 			if (frameCount % 10 == 0) {
 				if (frameCount % 10 == 0) {
-					mMap->mCharacters[15]->Move(0, 1);
+					mMap->mCharacters[15]->Move(0, 1, mMap);
 					for (int i = 16; i < 23; i++) {
-						mMap->mCharacters[i]->Walk(0, 1);
+						mMap->mCharacters[i]->Walk(0, 1, mMap);
 					}
 					mMap->CameraMove(0, 16);
 				}

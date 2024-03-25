@@ -60,8 +60,13 @@
 #define UI_TEXTBOX_L2                   176
 #define UI_TEXTBOX_L4                   177
 #define OBJ_STONEGOLEM                  178
-#define OBJ_GENERAL                     179
 #define OBJ_GENERAL1                    179
+#define CBG_FIELD                       180
+#define OBJ_HORSEGENERAL01              181
+#define OBJ_HORSESOLDIER02              182
+#define OBJ_HORSESOLDIER01              183
+#define IDB_BITMAP3                     184
+#define OBJ_LIGHTSOLDIER                184
 #define IDC_STATIC                      -1
 
 // Next default values for new objects
@@ -69,7 +74,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
-#define _APS_NEXT_RESOURCE_VALUE        180
+#define _APS_NEXT_RESOURCE_VALUE        185
 #define _APS_NEXT_COMMAND_VALUE         32771
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           110
